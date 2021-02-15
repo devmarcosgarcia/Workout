@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/menu_editar_treino"
+        android:icon="@android:drawable/ic_menu_edit"
+        android:title="@string/menu_treino_editar_treino" />
+
+    <item
+        android:id="@+id/menu_deletar_treino"
+        android:title="@string/menu_treino_remover_treino"
+        />
+
+    <item
+        android:id="@+id/menu_adicionar_exercicios"
+        android:title="@string/menu_treino_adicionar_exercicios"
+        />
+
+</menu>

@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Workout</string>
+    <string name="toobar_title_treinos">Treinos</string>
+    <string name="content_fab">Adicionar novo treino</string>
+    <string name="hint_nome_treino">Digite o nome do treino</string>
+    <string name="menu_treino_salvar">Salvar</string>
+    <string name="button_Salvar">Salvar</string>
+    <string name="menu_treino_remover_treino">Remover Treino</string>
+    <string name="menu_treino_editar_treino">Editar Treino</string>
+    <string name="menu_treino_adicionar_exercicios">Adicionar Exercícios</string>
+</resources>
