@@ -8,4 +8,5 @@
     <string name="menu_treino_remover_treino">Remover Treino</string>
     <string name="menu_treino_editar_treino">Editar Treino</string>
     <string name="menu_treino_adicionar_exercicios">Adicionar Exercícios</string>
+    <string name="description_image_splash_screen">Workout image icon</string>
 </resources>

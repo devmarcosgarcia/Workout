@@ -9,16 +9,28 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Workout">
-        <activity android:name=".activity.AddExerciciosActivity"></activity>
-        <activity android:name=".activity.TreinoActivity" />
-        <activity android:name=".activity.AddTreinoActivity" />
-        <activity android:name=".activity.MainActivity">
+
+        <activity
+            android:name=".activity.SplashActivity"
+            android:theme="@style/Theme.AppCompat.SplashScreen">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
         </activity>
+
+        <activity android:name=".activity.AddExerciciosActivity" />
+        <activity android:name=".activity.TreinoActivity" />
+        <activity android:name=".activity.AddTreinoActivity" />
+        <activity android:name=".activity.MainActivity">
+        </activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
     </application>
 
 </manifest>
