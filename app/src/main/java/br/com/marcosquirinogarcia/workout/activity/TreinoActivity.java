@@ -154,7 +154,7 @@ public class TreinoActivity extends AppCompatActivity {
 
                 //Título e mensagem do alertDialog
                 dialog.setTitle("Confirmar Exclusão");
-                dialog.setMessage("Deseja excluir a tarefa " + treinoAtual.getNomeTreino() + " ?");
+                dialog.setMessage("Deseja excluir a treino " + treinoAtual.getNomeTreino() + " ?");
 
                 dialog.setPositiveButton("Sim", new DialogInterface.OnClickListener() {
                     @Override

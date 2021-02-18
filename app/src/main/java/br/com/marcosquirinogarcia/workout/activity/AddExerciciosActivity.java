@@ -76,11 +76,14 @@ public class AddExerciciosActivity extends AppCompatActivity {
                 ExercicioDAO exercicioDAO = new ExercicioDAO(getApplicationContext());
 
                 String nomeExercicio = editTextNomeExercicio.getText().toString();
+                String numSeries = editTextNumSeries.getText().toString();
+                String numRepeticoes = editTextNumRepeticoes.getText().toString();
+                String peso = editTextPeso.getText().toString();
 
                 if (exercicioSelecionado != null){
                     //edicao do exercicio
 
-                    if (!nomeExercicio.isEmpty()){
+                    if (!nomeExercicio.isEmpty() && !numSeries.isEmpty() && !numRepeticoes.isEmpty() && !peso.isEmpty() ){
 
                         Exercicio exercicio = new Exercicio();
 
@@ -101,7 +104,7 @@ public class AddExerciciosActivity extends AppCompatActivity {
                     }
                 }else {
                     //salvar novo exercicio
-                    if (!nomeExercicio.isEmpty()){
+                    if (!nomeExercicio.isEmpty() && !numSeries.isEmpty() && !numRepeticoes.isEmpty() && !peso.isEmpty() ){
 
                         Exercicio exercicio = new Exercicio();
 
