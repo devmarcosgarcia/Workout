@@ -21,9 +21,10 @@
         android:id="@+id/textViewAddExercicio"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="Adicionar exercicio em:"
-        android:textSize="24sp"
+        android:layout_marginTop="8dp"
+        android:text="Adicionar exercício no treino"
+        android:textColor="@color/black"
+        android:textSize="22sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -33,114 +34,213 @@
         android:id="@+id/textView_nome_treino_selecionado"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
-        android:layout_marginEnd="16dp"
         android:text="nome treino selecionado"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewAddExercicio" />
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textInputLayout_nome_treino"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView_nome_treino_selecionado">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/editText_nome_exercicio"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Nome"
-            android:inputType="textAutoCorrect|text" />
-
-    </com.google.android.material.textfield.TextInputLayout>
-
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textInputLayout_num_series"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="8dp"
-        app:layout_constraintEnd_toStartOf="@+id/textInputLayout_num_repeticoes"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textInputLayout_nome_treino">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/editText_num_series"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Series"
-            android:inputType="number" />
-
-    </com.google.android.material.textfield.TextInputLayout>
-
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textInputLayout_num_repeticoes"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="16dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textInputLayout_num_series"
-        app:layout_constraintTop_toBottomOf="@+id/textInputLayout_nome_treino">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/editText_num_repeticoes"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Repetições"
-            android:inputType="number" />
-
-    </com.google.android.material.textfield.TextInputLayout>
-
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textInputLayout_qtd_peso"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="8dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/textInputLayout_num_repeticoes"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textInputLayout_num_series"
-        app:layout_constraintVertical_bias="0.0">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/editText_qtd_peso"
-            android:layout_width="180dp"
-            android:layout_height="wrap_content"
-            android:hint="Peso"
-            android:inputType="number" />
-
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <Button
-        android:id="@+id/button_add_exercicio"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:text="Add"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:textColor="@color/black"
+        android:textSize="22sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textInputLayout_qtd_peso"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@+id/textViewAddExercicio" />
+
+
+    <EditText
+        android:id="@+id/edit_nome_exercicio"
+        android:layout_width="379dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginRight="24dp"
+        android:hint="Digite aqui o nome do exercício"
+        android:inputType="textAutoCorrect|text"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_nome_treino_selecionado" />
+
+    <TextView
+        android:id="@+id/tv_series"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="123dp"
+        android:layout_marginRight="123dp"
+        android:text="Séries"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/btn_remove_series"
+        app:layout_constraintEnd_toStartOf="@+id/btn_remove_series"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="@+id/guideline" />
+
+    <TextView
+        android:id="@+id/tv_num_series"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginRight="24dp"
+        android:text="0"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toStartOf="@+id/btn_add_series"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btn_remove_series"
+        app:layout_constraintTop_toBottomOf="@+id/edit_nome_exercicio" />
+
+    <TextView
+        android:id="@+id/tv_peso"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="133dp"
+        android:layout_marginRight="133dp"
+        android:text="Peso"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toStartOf="@+id/btn_remove_peso"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/tv_repeticoes" />
+
+    <TextView
+        android:id="@+id/tv_qtd_peso"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginRight="24dp"
+        android:text="0"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/btn_remove_peso"
+        app:layout_constraintEnd_toStartOf="@+id/btn_add_peso"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btn_remove_peso" />
+
+    <TextView
+        android:id="@+id/tv_repeticoes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="83dp"
+        android:layout_marginRight="83dp"
+        android:text="Repetições"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toStartOf="@+id/btn_remove_repeticoes"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/tv_series" />
+
+    <TextView
+        android:id="@+id/tv_num_repeticoes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginRight="24dp"
+        android:text="0"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/btn_remove_repeticoes"
+        app:layout_constraintEnd_toStartOf="@+id/btn_add_repeticoes"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btn_remove_repeticoes" />
+
+    <Button
+        android:id="@+id/btn_add_exercicio"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:text="Adicionar"
+        app:layout_constraintEnd_toStartOf="@+id/guideline2"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/btn_remove_peso" />
+
+    <Button
+        android:id="@+id/btn_remove_series"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@drawable/ic_minus_button"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tv_num_series"
+        app:layout_constraintEnd_toStartOf="@+id/tv_num_series"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tv_series" />
+
+    <Button
+        android:id="@+id/btn_remove_repeticoes"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@drawable/ic_minus_button"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tv_repeticoes"
+        app:layout_constraintEnd_toStartOf="@+id/tv_num_repeticoes"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tv_repeticoes" />
+
+    <Button
+        android:id="@+id/btn_remove_peso"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@drawable/ic_minus_button"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tv_peso"
+        app:layout_constraintEnd_toStartOf="@+id/tv_qtd_peso"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tv_peso" />
+
+    <Button
+        android:id="@+id/btn_add_series"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@drawable/ic_add_button"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tv_num_series"
+        app:layout_constraintEnd_toStartOf="@+id/guideline2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tv_num_series" />
+
+    <Button
+        android:id="@+id/btn_add_repeticoes"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@drawable/ic_add_button"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tv_num_repeticoes"
+        app:layout_constraintEnd_toStartOf="@+id/guideline2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tv_num_repeticoes" />
+
+    <Button
+        android:id="@+id/btn_add_peso"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@drawable/ic_add_button"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tv_qtd_peso"
+        app:layout_constraintEnd_toStartOf="@+id/guideline2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tv_qtd_peso" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="40dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="40dp" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
