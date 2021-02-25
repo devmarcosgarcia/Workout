@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="#D8D4D4">
+    android:background="?android:attr/colorBackground">
 
     <TextView
         android:id="@+id/textView_nome_exercicio"
@@ -14,7 +14,8 @@
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
         android:text="nome exercicio"
-        android:textSize="18sp"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -25,6 +26,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="00"
+        android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="@+id/textView9"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -38,6 +40,7 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
         android:text="x"
+        android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="@+id/textView_num_series"
         app:layout_constraintEnd_toStartOf="@+id/textView_num_repeticoes"
         app:layout_constraintHorizontal_bias="0.5"
@@ -54,6 +57,7 @@
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="16dp"
         android:text="00"
+        android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/textView10"
         app:layout_constraintHorizontal_bias="0.5"
@@ -68,6 +72,7 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="32dp"
         android:text="00"
+        android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="@+id/textView10"
         app:layout_constraintEnd_toStartOf="@+id/textView9"
         app:layout_constraintHorizontal_bias="0.5"
@@ -81,6 +86,7 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
         android:text="Kg"
+        android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="@+id/textView_num_repeticoes"
         app:layout_constraintEnd_toStartOf="@+id/textView_qtd_peso"
         app:layout_constraintHorizontal_bias="0.5"

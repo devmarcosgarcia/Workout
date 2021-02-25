@@ -49,7 +49,7 @@ public class AddExerciciosActivity extends AppCompatActivity {
         TextNumSeries = findViewById(R.id.tv_num_series);
         TextNumRepeticoes = findViewById(R.id.tv_num_repeticoes);
         TextPeso = findViewById(R.id.tv_qtd_peso);
-        buttonAddExercicio = findViewById(R.id.btn_add_exercicio);
+        buttonAddExercicio = findViewById(R.id.button_add_exercicio);
         btnRemoveSeries = findViewById(R.id.btn_remove_series);
         btnAddSeries = findViewById(R.id.btn_add_series);
         btnRemoveRepeticoes = findViewById(R.id.btn_remove_repeticoes);

@@ -23,7 +23,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:text="Adicionar exercício no treino"
-        android:textColor="@color/black"
+        android:textColor="?android:attr/textColorSecondary"
         android:textSize="22sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -36,7 +36,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:text="nome treino selecionado"
-        android:textColor="@color/black"
+        android:textColor="?android:attr/textColorSecondary"
         android:textSize="22sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -55,8 +55,8 @@
         android:layout_marginRight="24dp"
         android:hint="Digite aqui o nome do exercício"
         android:inputType="textAutoCorrect|text"
-        android:textColor="@color/black"
-        android:textColorHint="@color/black"
+        android:textColor="?android:attr/textColorSecondary"
+        android:textColorHint="?android:attr/textColorSecondary"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -69,7 +69,7 @@
         android:layout_marginEnd="123dp"
         android:layout_marginRight="123dp"
         android:text="Séries"
-        android:textColor="@color/black"
+        android:textColor="?android:attr/textColorSecondary"
         android:textSize="18sp"
         app:layout_constraintBaseline_toBaselineOf="@+id/btn_remove_series"
         app:layout_constraintEnd_toStartOf="@+id/btn_remove_series"
@@ -87,7 +87,7 @@
         android:layout_marginEnd="24dp"
         android:layout_marginRight="24dp"
         android:text="0"
-        android:textColor="@color/black"
+        android:textColor="?android:attr/textColorSecondary"
         android:textSize="18sp"
         app:layout_constraintEnd_toStartOf="@+id/btn_add_series"
         app:layout_constraintHorizontal_bias="0.5"
@@ -102,7 +102,7 @@
         android:layout_marginEnd="133dp"
         android:layout_marginRight="133dp"
         android:text="Peso"
-        android:textColor="@color/black"
+        android:textColor="?android:attr/textColorSecondary"
         android:textSize="18sp"
         app:layout_constraintEnd_toStartOf="@+id/btn_remove_peso"
         app:layout_constraintHorizontal_bias="1.0"
@@ -119,7 +119,7 @@
         android:layout_marginEnd="24dp"
         android:layout_marginRight="24dp"
         android:text="0"
-        android:textColor="@color/black"
+        android:textColor="?android:attr/textColorSecondary"
         android:textSize="18sp"
         app:layout_constraintBaseline_toBaselineOf="@+id/btn_remove_peso"
         app:layout_constraintEnd_toStartOf="@+id/btn_add_peso"
@@ -134,7 +134,7 @@
         android:layout_marginEnd="83dp"
         android:layout_marginRight="83dp"
         android:text="Repetições"
-        android:textColor="@color/black"
+        android:textColor="?android:attr/textColorSecondary"
         android:textSize="18sp"
         app:layout_constraintEnd_toStartOf="@+id/btn_remove_repeticoes"
         app:layout_constraintHorizontal_bias="1.0"
@@ -151,22 +151,13 @@
         android:layout_marginEnd="24dp"
         android:layout_marginRight="24dp"
         android:text="0"
-        android:textColor="@color/black"
+        android:textColor="?android:attr/textColorSecondary"
         android:textSize="18sp"
         app:layout_constraintBaseline_toBaselineOf="@+id/btn_remove_repeticoes"
         app:layout_constraintEnd_toStartOf="@+id/btn_add_repeticoes"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/btn_remove_repeticoes" />
 
-    <Button
-        android:id="@+id/btn_add_exercicio"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="60dp"
-        android:text="Adicionar"
-        app:layout_constraintEnd_toStartOf="@+id/guideline2"
-        app:layout_constraintStart_toStartOf="@+id/guideline"
-        app:layout_constraintTop_toBottomOf="@+id/btn_remove_peso" />
 
     <Button
         android:id="@+id/btn_remove_series"
@@ -241,6 +232,16 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintGuide_end="40dp" />
+
+    <Button
+        android:id="@+id/button_add_exercicio"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:text="Adicionar"
+        app:layout_constraintEnd_toStartOf="@+id/guideline2"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/btn_remove_peso" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

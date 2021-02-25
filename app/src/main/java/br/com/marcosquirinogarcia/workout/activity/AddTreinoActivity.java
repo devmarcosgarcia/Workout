@@ -1,15 +1,14 @@
 package br.com.marcosquirinogarcia.workout.activity;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
-
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import com.google.android.material.textfield.TextInputEditText;
 
@@ -22,6 +21,7 @@ public class AddTreinoActivity extends AppCompatActivity {
     private TextInputEditText textAdicionarTreino;
     private Treino treinoAtual;
     private TextView textViewTitulo;
+    private Button buttonSalvar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +34,7 @@ public class AddTreinoActivity extends AppCompatActivity {
 
         textAdicionarTreino = findViewById(R.id.editTextNomeTreino);
         textViewTitulo = findViewById(R.id.textView_titulo_pagina_add_edit_treino);
+        buttonSalvar = findViewById(R.id.button_add_treino_salvar);
 
         //Recupera treino para edição
         treinoAtual = (Treino) getIntent().getSerializableExtra("treinoSelecionado");
@@ -45,65 +46,57 @@ public class AddTreinoActivity extends AppCompatActivity {
 
             textAdicionarTreino.setText(treinoAtual.getNomeTreino());
         }
-    }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
+        buttonSalvar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
 
-        getMenuInflater().inflate(R.menu.menu_add_edit_treino, menu);
+                TreinoDAO treinoDAO = new TreinoDAO(getApplicationContext());
 
-        return super.onCreateOptionsMenu(menu);
-    }
+                String nomeTreino = textAdicionarTreino.getText().toString();
 
-    @Override
-    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+                if (treinoAtual != null) { // treino para edicao
 
-        if (item.getItemId() == R.id.menu_salvar_treino) {
+                    if (!nomeTreino.isEmpty()) {
 
-            TreinoDAO treinoDAO = new TreinoDAO(getApplicationContext());
+                        Treino treino = new Treino();
+                        treino.setNomeTreino(nomeTreino);
+                        treino.setId(treinoAtual.getId());
 
-            String nomeTreino = textAdicionarTreino.getText().toString();
+                        //atualiza no banco de dados
+                        if (treinoDAO.atualizar(treino)) {
+                            finish();
+                            Toast.makeText(AddTreinoActivity.this, "Treino modificado!", Toast.LENGTH_SHORT).show();
+                        } else {
+                            Toast.makeText(AddTreinoActivity.this, "Erro ao modificar treino", Toast.LENGTH_SHORT).show();
+                        }
 
-            if (treinoAtual != null) { // treino para edicao
-
-                if (!nomeTreino.isEmpty()){
-
-                    Treino treino = new Treino();
-                    treino.setNomeTreino(nomeTreino);
-                    treino.setId(treinoAtual.getId());
-
-                    //atualiza no banco de dados
-                    if (treinoDAO.atualizar(treino)) {
-                        finish();
-                        Toast.makeText(this, "Treino modificado!", Toast.LENGTH_SHORT).show();
-                    } else {
-                        Toast.makeText(this, "Erro ao modificar treino", Toast.LENGTH_SHORT).show();
+                        Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                        startActivity(intent);
                     }
 
-                    Intent intent = new Intent(getApplicationContext(), MainActivity.class);
-                    startActivity(intent);
-                }
+                } else { // salvar treino
 
-            } else { // salvar treino
+                    //Validação do treino
+                    if (!nomeTreino.isEmpty()) {
 
-                //Validação do treino
-                if (!nomeTreino.isEmpty()) {
+                        Treino treino = new Treino();
+                        treino.setNomeTreino(nomeTreino);
 
-                    Treino treino = new Treino();
-                    treino.setNomeTreino(nomeTreino);
+                        if (treinoDAO.salvar(treino)) {
+                            finish();
+                            Toast.makeText(AddTreinoActivity.this, "Treino salvo!", Toast.LENGTH_SHORT).show();
 
-                    if (treinoDAO.salvar(treino)) {
-                        finish();
-                        Toast.makeText(this, "Treino salvo!", Toast.LENGTH_SHORT).show();
-                    } else {
-                        Toast.makeText(this, "Erro ao salvar treino", Toast.LENGTH_SHORT).show();
+                        } else {
+                            Toast.makeText(AddTreinoActivity.this, "Erro ao salvar treino", Toast.LENGTH_SHORT).show();
 
+                        }
                     }
+
                 }
+
 
             }
-
-        }
-        return super.onOptionsItemSelected(item);
+        });
     }
 }
