@@ -25,9 +25,9 @@ public class AddExerciciosActivity extends AppCompatActivity {
     private Button buttonAddExercicio;
 
     private EditText editTextNomeExercicio;
-    private TextView TextNumSeries;
-    private TextView TextNumRepeticoes;
-    private TextView TextPeso;
+    private EditText TextNumSeries;
+    private EditText TextNumRepeticoes;
+    private EditText TextPeso;
 
     private Button btnRemoveSeries;
     private Button btnAddSeries;

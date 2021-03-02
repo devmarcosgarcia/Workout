@@ -77,7 +77,7 @@
         app:layout_constraintHorizontal_chainStyle="packed"
         app:layout_constraintStart_toStartOf="@+id/guideline" />
 
-    <TextView
+    <EditText
         android:id="@+id/tv_num_series"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -86,6 +86,7 @@
         android:layout_marginTop="60dp"
         android:layout_marginEnd="24dp"
         android:layout_marginRight="24dp"
+        android:inputType="numberSigned"
         android:text="0"
         android:textColor="?android:attr/textColorSecondary"
         android:textSize="18sp"
@@ -110,7 +111,7 @@
         app:layout_constraintStart_toStartOf="@+id/guideline"
         app:layout_constraintTop_toBottomOf="@+id/tv_repeticoes" />
 
-    <TextView
+    <EditText
         android:id="@+id/tv_qtd_peso"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -118,6 +119,7 @@
         android:layout_marginLeft="24dp"
         android:layout_marginEnd="24dp"
         android:layout_marginRight="24dp"
+        android:inputType="numberSigned"
         android:text="0"
         android:textColor="?android:attr/textColorSecondary"
         android:textSize="18sp"
@@ -142,7 +144,7 @@
         app:layout_constraintStart_toStartOf="@+id/guideline"
         app:layout_constraintTop_toBottomOf="@+id/tv_series" />
 
-    <TextView
+    <EditText
         android:id="@+id/tv_num_repeticoes"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -150,6 +152,7 @@
         android:layout_marginLeft="24dp"
         android:layout_marginEnd="24dp"
         android:layout_marginRight="24dp"
+        android:inputType="numberSigned"
         android:text="0"
         android:textColor="?android:attr/textColorSecondary"
         android:textSize="18sp"
